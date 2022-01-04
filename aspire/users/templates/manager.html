@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>User Form</title>
+        <link rel='stylesheet' href='../static/style.css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">                
+    </head>
+    <body>
+        <nav class='topnav'>
+            <a href='/add' class="navbar-nav ml-auto">Go Back</a>
+            <span class="navbar-nav ml-auto">                
+                <a href='/splogout' class="navbar-nav ml-auto">Logout</a>
+            </span>
+        </nav>        
+        <div class='create-user'>
+            <h2 class='header'>Create Manager</h2>
+            <form action="" method="POST" class='user-form'>
+                {% csrf_token %}
+                <label class="col-sm-2 col-form-label" for="{{ form.name.id_for_label }}">{{form.name.label_tag}}<span class='required'></span></label>{{form.name}}<span class='error'>{{form.name.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.password.id_for_label }}">{{form.password.label_tag}}<span class='required'></span></label>{{form.password}}<span class='error'>{{form.password.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.email.id_for_label }}">{{form.email.label_tag}}<span class='required'></span></label>{{form.email}}<span class='error'>{{form.email.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.img.id_for_label }}">{{form.img.label_tag}}<span class='required'></span></label>{{form.img}}<span class='error'>{{form.img.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.domain.id_for_label }}">{{form.domain.label_tag}}<span class='required'></span></label>{{form.domain}}<span class='error'>{{form.domain.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.gender.id_for_label }}">{{form.gender.label_tag}}<span class='required'></span></label>{{form.gender}}<span class='error'>{{form.gender.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.group.id_for_label }}">{{form.group.label_tag}}<span class='required'></span></label>{{form.group}}<span class='error'>{{form.group.errors}}</span><br>
+                <label class="col-sm-2 col-form-label" for="{{ form.bio.id_for_label }}">{{form.bio.label_tag}}</label>{{form.bio}}<span>{{form.bio.error}}</span><br>
+                <button type="submit" class='button'>Submit</button>
+            </form>
+        </div>
+        <footer class="">
+            <div class="footer-copyright text-center py-3">&copy 2021 Copyright:    
+            <a href="#">SK</a>    
+            </div>    
+        </footer>
+    </body>
+</html>

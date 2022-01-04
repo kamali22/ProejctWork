@@ -1,0 +1,9 @@
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+.topnav-right {
+    float: right;
+}

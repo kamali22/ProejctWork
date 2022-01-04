@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Approve Form</title>
+        <link rel='stylesheet' href='../static/style.css'>
+        <link rel='stylesheet' href='../DJANGO/boot/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='../static/popupstyle.css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script>
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+        </script>
+        <style>
+            .color {
+                color: rgb(58, 99, 233);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class='topnav'>
+            <a href='/approve'>Approve/Cancel</a>
+            <span class="topnav-right">
+                <a href='/updateman'>Update Profile</a>
+                <a href='/splogout'>Logout</a>
+            </span>
+        </nav>
+        <p> You are logged in as {{current_user.username}}! </p>
+        <center>
+            <div><h5><caption>{{header}}</caption></h5>
+                {% csrf_token %}
+                <table class='table table-hover' border='1' style='border-collapse:collapse; width:70%; text-align:center;'>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Employee Name</th>
+                        <th>Leave Reason</th>
+                        <th>Leave Type</th>
+                        <th>Status</th>
+                        <th>Emp id</th>
+                        <th colspan='2'>Action</th>
+                    </tr>
+                    {% if value %}
+                        {% for i in value %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{i.emp_name}}</td>
+                                <td>{{i.leave_reason}}</td>
+                                <td>{{i.leave_type}}</td>
+                                <td>{{i.status}}</td>
+                                <td>{{i.emp_name_id}}</td>
+                                <td> 
+                                    <button class='color'><a href='/approved/{{i.id}}'>Approve</a></button>                    
+                                </td>
+                                <td>                    
+                                    <button class="open-button color" onclick="openForm()">Cancel</button>                                     
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan='7'>No requested leave found</td>
+                        </tr>    
+                    {% endif %} 
+                </table><br><br>
+            </div> 
+        </center>    
+        <span class="form-popup" id="myForm" method='POST'>
+            {% for i in value %}
+                <form action="/cancelled/{{i.id}}" class="form-container">      
+                    <label for="cancel_reason"><b>Reason for cancelling leave</b></label>
+                    <input type="text" placeholder="Cancel reason" name="cancel_reason" required>         
+                    <button type="submit" class="btn">Submit</button> 
+                </form>
+            {% endfor %}
+        </span> 
+        <footer class="">
+            <div class="footer-copyright text-center py-3">&copy 2021 Copyright:    
+                <a href="#">SK</a>    
+            </div>    
+        </footer>
+    </body>
+</html>

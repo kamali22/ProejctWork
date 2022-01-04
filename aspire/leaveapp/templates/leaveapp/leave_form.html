@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Leave Request Form</title>
+        <link rel='stylesheet' href='../static/style.css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+               
+    </head>
+    <body> 
+        <nav class='topnav'>
+                <a href='/apply'>Apply Leave</a>
+                <a href='/leavehistory'>Leave History</a>
+                <a href='/leavedetails'>Requested Leave</a>
+                <span class='topnav-right'> 
+                    <a href='/updateemp'>Update Profile</a>                   
+                    <a href='/splogout'>Logout</a>
+                </span>
+        </nav>         
+        <p> You are logged in as {{current_user.username}}! </p>
+        <div class="leave-form">
+            <form action='' method='POST' class="form-group user-form">
+                <fieldset>
+                    <b><legend>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apply Leave</legend></b>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Employee Name:</label> <input style="margin-right:5px" type='text' value={{current_user.username}} readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label" for="{{ form.leave_reason.id_for_label }}" >{{form.leave_reason.label_tag}}</label><span style="margin-right: 5px;"></span>{{form.leave_reason}}<span class='error'>{{form.leave_reason.errors}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label" for="{{ form.leave_type.id_for_label }}">{{form.leave_type.label_tag}}</label><span style="margin-right: 5px;"></span>{{form.leave_type}}<span class='error'>{{form.leave_type.errors}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label" for="{{ form.from_date.id_for_label }}">{{form.from_date.label_tag}}</label><span style="margin-right: 5px;"></span>{{form.from_date}}<span class='error'>{{form.from_date.errors}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label" for="{{ form.to_date.id_for_label }}">{{form.to_date.label_tag}}</span></label><span style="margin-right: 5px;"></span>{{form.to_date}}<span class='error'>{{form.to_date.errors}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label" for="{{ form.no_of_days.id_for_label }}">{{form.no_of_days.label_tag}}</label><span style="margin-right: 5px;"></span>{{form.no_of_days}}<span class='error'>{{form.no_of_days.errors}}</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Manager Name:</label> <input type='text' readonly value={{manager_name}}><br><br>                 
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='submit' value='Apply'>
+                    &nbsp;&nbsp;<input type='reset' value='Reset'>
+                </fieldset>
+            </form>        
+        </div>
+        <footer class="">
+            <div class="footer-copyright text-center py-3">&copy 2021 Copyright:    
+                <a href="#">SK</a>    
+            </div>    
+        </footer>        
+    </body>
+</html>

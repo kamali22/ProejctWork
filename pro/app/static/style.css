@@ -1,0 +1,18 @@
+.leave-form{              
+    border: 2px solid rgb(243, 245, 111); 
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px 4px; 
+    width: 35%;
+    margin-left: 400px;
+  } 
+  .user-form {
+    margin-left: 35px;
+    width: 1000px;
+  }
+  .container{
+    border: 3px solid rgb(243, 245, 111);    
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px 4px; 
+    width: 35%;
+    margin: auto;
+  }

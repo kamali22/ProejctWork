@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Login Form</title>
+        <link rel='stylesheet' href='../static/style.css'>              
+    </head>
+    <body>
+        <center><br>
+          <h1>Leave Management System</h1>
+          <br><br><br>
+            <div class="div">
+                <h2>Login Here</h2>
+                <form action="" method="POST">
+                    {% csrf_token %} 
+                    <div>
+                        {%  for message in messages%}
+                        <h3>{{message}}</h3>
+                        {% endfor %}
+                    </div>
+                    <label class="col-sm-2 col-form-label" for="{{ form.username.id_for_label }}">{{form.username.label_tag}}<span class='required'></span></label><span style="margin-left:25px"></span>{{form.username}}<span class='error'>{{form.username.error}}</span><br><br>
+                    <label class="col-sm-2 col-form-label" for="{{ form.password.id_for_label }}">{{form.password.label_tag}}<span class='required'></span></label><span style="margin-left:25px"></span>{{form.password}}<span class='error'>{{form.password.error}}</span><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+                <a href="/forget">Forget Password?</a>
+                <footer class="">
+                    <div class="footer-copyright text-center py-3">&copy 2021 Copyright:    
+                        <a href="#">SK</a>    
+                    </div>    
+                </footer>
+            </div>     
+        </center> 
+    </body>
+</html>
