@@ -1,0 +1,45 @@
+.cart-items {
+    margin-left: 25rem;
+}
+.cart-header {
+    color: aqua;
+}
+.cartbutton {
+    background-color: rgb(60, 168, 231);
+    margin: 1rem;
+}
+.increment {
+    background-color: rgb(60, 168, 231);
+    width: 2rem;
+    height: 2rem;
+    font-size: 140%;
+    color: white;
+    font-weight: 800;
+}
+.cart {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+.remove {
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    font-size: 100%;
+    width: 8rem;
+    height: 2.5rem;
+}
+.clear {
+    margin-right: 1rem;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+.confirm {
+    margin-left: 1rem;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+}
