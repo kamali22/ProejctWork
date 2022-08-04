@@ -1,5 +1,5 @@
-import './App.css';
-import Routing from './components/Routing';
+import "./App.css";
+import Routing from "/home/kamali/react/ecommerce/src/components/users/Routing";
 
 function App() {
   return (

@@ -1,43 +1,43 @@
 .section {
-    margin: auto;
-    margin-top: 2%;
-    margin-left: 4%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    display: inline-block;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: auto;
-    overflow-x: hidden;
+  margin: auto;
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  overflow-x: hidden;
 }
 .bootstrap-cards:hover {
-    transform: scale(1.05);
-    overflow: hidden;
-    cursor: pointer;
+  transform: scale(1.05);
+  overflow: hidden;
+  cursor: pointer;
 }
 .item-desc {
-    font-weight: 300;
+  font-weight: 300;
 }
 .card-title {
-    /* text-transform: uppercase; */
-    font-weight: 300;
+  /* text-transform: uppercase; */
+  font-weight: 300;
 }
 .card-text {
-    font-size: 120%;
+  font-size: 120%;
 }
 .bootstrap-cards {
-    width: 20rem;
-    margin-bottom: 5%;
-    overflow: hidden;
+  width: 20rem;
+  margin-bottom: 5%;
+  overflow: hidden;
 }
 .cart-button {
-    background-color: rgb(69, 203, 236);
-    width: 16rem;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
+  background-color: rgb(69, 203, 236);
+  width: 16rem;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 .item-price {
-    color: rgb(65, 202, 65);
+  color: rgb(65, 202, 65);
 }
