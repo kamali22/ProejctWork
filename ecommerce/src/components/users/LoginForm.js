@@ -4,7 +4,6 @@ import "/home/kamali/react/ecommerce/src/styles/LoginStyle.css";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Cookies from "universal-cookie";
 
 function LoginForm() {
   const [data, setData] = useState({
@@ -14,7 +13,6 @@ function LoginForm() {
 
   const [persons, setPersons] = useState([]);
   const [error, setError] = useState(false);
-  const cookies = new Cookies();
 
   let navigate = useNavigate();
   const sellerPage = () => {
@@ -23,9 +21,9 @@ function LoginForm() {
   };
   const buyerPage = (id) => {
     axios.get("http://localhost:9000/posts" + "/" + id).then((res) => {
+      document.cookie = "index=" + res.data.id;
       toast.success("Logged in successfully!", { autoClose: 100 });
       navigate("/buyer", { state: res.data });
-      cookies.set("name", res.data.id);
     });
   };
 
@@ -47,10 +45,8 @@ function LoginForm() {
         ) {
           if (userdata.category === "seller") {
             sellerPage();
-            console.log('seller');
           } 
           if (userdata.category === "buyer") {
-            console.log("buyer");
             buyerPage(userdata.id);
             
           }         

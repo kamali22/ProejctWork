@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "/home/kamali/react/ecommerce/src/styles/Cart.css";
-import NavBar from "../users/NavBar";
+import NavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 
 function Cart({ handleChange, handleRemove, handleClear }) {
   const [cart, setCart] = useState([]);
@@ -35,11 +35,15 @@ function Cart({ handleChange, handleRemove, handleClear }) {
   const placeOrder = () => {
     toast.success("Order placed!", { autoClose: 500 });
     let path = "/buyerorder";
-    axios.post("http://localhost:9000/orders", cart);
-    setOrders(cart);
+    setOrders([cart]);
+    cart[0].map((item) => {
+      const {prname, image, amount, quantity, category, description} = item;
+      const user = {prname, image, amount, quantity, category, description, status: 'Yet to be shipped'};
+      axios.post("http://localhost:9000/orders", user);
+    })
     navigate(path, { state: { items: cart, price: totalPrice } });
+    handleClear(cart[0], setQuantity);
   };
-
   const calculatePrice = () => {
     let amnt = 0;
     axios.get("http://localhost:9000/cart").then((res) => {

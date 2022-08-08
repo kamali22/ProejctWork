@@ -1,19 +1,23 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Cookies from "universal-cookie/es6";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "/home/kamali/react/ecommerce/src/styles/UpdateProfile.css";
 import NavBar from "./NavBar";
 
-function UpdateProfile({ handleBuyerSearch, handleClear, cart }, props) {
+function UpdateProfile({ handleBuyerSearch, handleClear, cart }) {
   const isSeller = false;
   const isMenu = false;
+  const userData = {};
   const [data, setData] = useState();
-  const cookies = new Cookies();
-  const index = cookies.get("name");
+  const cookies = document.cookie;
+  const cookiearray = cookies.split(';');
+  for(var i=0; i<cookiearray.length; i++) {
+    userData[cookiearray[i].split('=')[0]] = cookiearray[i].split('=')[1]
+  }
+
   const retrieveData = () => {
-    axios.get("http://localhost:9000/posts" + "/" + index).then((res) => {
+    axios.get("http://localhost:9000/posts" + "/" + userData[' index']).then((res) => {
       setData(res.data);
     });
   };
@@ -41,7 +45,7 @@ function UpdateProfile({ handleBuyerSearch, handleClear, cart }, props) {
       pincode,
       category,
     };
-    await axios.put("http://localhost:9000/posts" + "/" + index, user);
+    await axios.put("http://localhost:9000/posts" + "/" + userData[' index'], user);
   };
 
   const handleChange = (e) => {

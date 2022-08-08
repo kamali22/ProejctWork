@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Card, Container } from "react-bootstrap";
 import "/home/kamali/react/ecommerce/src/styles/Dashboard.css";
-import SellerNavBar from "../users/NavBar";
+import SellerNavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 
 function Dashboard() {
   const [product, setProduct] = useState([]);

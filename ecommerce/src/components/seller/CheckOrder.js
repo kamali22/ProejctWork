@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SellerNavBar from "../users/NavBar";
+import SellerNavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 import { Button } from "react-bootstrap";
 import "/home/kamali/react/ecommerce/src/styles/CheckOrder.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function CheckOrder() {
-  const [cart, setCart] = useState([]);
+  const [order, setOrder] = useState([]);
   const isSeller = true;
 
-  const handleShipped = () => {
+  const handleShipped = (item) => {
     toast.success("Order Shipped", { autoClose: 500 });
-    const status = { status: "shipped", isClicked: 1 };
-    const id = 1;
-    axios.put("http://localhost:9000/dispatch" + "/" + id, status);
+    const updatedOrder = {prname:item.prname, image:item.image, amount:item.amount, quantity:item.quantity, category: item.category, description: item.description, status: "Shipped"};
+    axios.put("http://localhost:9000/orders" + "/" + item.id, updatedOrder);
   };
 
-  const handleDelivered = () => {
+  const handleDelivered = (item) => {
     toast.success("Order Delivered", { autoClose: 500 });
-    const status = { status: "delivered", isClicked: 1 };
-    const id = 1;
-    axios.put("http://localhost:9000/dispatch" + "/" + id, status);
+    const updatedOrder = {prname:item.prname, image:item.image, amount:item.amount, quantity:item.quantity, category: item.category, description: item.description, status: "Delivered"};
+    axios.put("http://localhost:9000/orders" + "/" + item.id, updatedOrder);
   };
 
   const handleData = () => {
-    axios.get("http://localhost:9000/cart").then((res) => {
-      setCart([res.data]);
+    axios.get("http://localhost:9000/orders").then((res) => {
+      setOrder([res.data]);
     });
   }; 
 
@@ -37,7 +35,7 @@ function CheckOrder() {
     <div>
       <SellerNavBar isSeller={isSeller} />
       <h2>Ordered Items</h2>
-      {Object.values(cart).map((item) => {
+      {Object.values(order).map((items) => {
         return (
           <div className="order-table">
             <tr>
@@ -46,25 +44,25 @@ function CheckOrder() {
               <th>Price</th>
               <th>Quantity</th>
             </tr>
-            {Object.values(item).map((items) => {
+            {Object.values(items).map((item) => {
               return (
-                <tr key={items.id}>
+                <tr key={item.id}>
                   <td>
                     <img
-                      src={items.image}
+                      src={item.image}
                       style={{ height: "4rem", width: "4rem" }}
                     />
                   </td>
-                  <td>{items.prname}</td>
-                  <td>${items.amount}</td>
-                  <td>Quantity ({items.quantity})</td>
+                  <td>{item.prname}</td>
+                  <td>${item.amount}</td>
+                  <td>Quantity ({item.quantity})</td>
                   <td>
-                    <Button className="btn" onClick={() => handleShipped()}>
+                    <Button className="btn" onClick={() => handleShipped(item)}>
                       Shipped
                     </Button>
                   </td>
                   <td>
-                    <Button className="btn" onClick={() => handleDelivered()}>
+                    <Button className="btn" onClick={() => handleDelivered(item)}>
                       Delivered
                     </Button>
                   </td>

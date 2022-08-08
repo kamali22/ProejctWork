@@ -56,13 +56,9 @@ function RegisterForm() {
           break; 
         } else {
           axios.get("http://localhost:9000/posts").then((res) => {
-            console.log("email exists validation")
             Object.values(res.data).map((item) => {
-              console.log("item is", item, "and item email is", item.email, value );
               if (item.email === value) { 
-                console.log("NEED TO SHOW VALIDATION HERE", emailErr);
                 emailErr.emailExists = "Email already exists";
-                console.log("After check email existense", emailErr);
                 isValid = false;
               } 
             });
@@ -104,10 +100,8 @@ function RegisterForm() {
           break;
         }
     }
-    console.log("Before setting email error", emailErr);
     setNameErr(nameErr);
     setEmailErr(emailErr);
-    console.log("After setting email error", emailErr);
     setPasswordErr(passwordErr);
     setPincodeErr(pincodeErr);
   };
@@ -187,7 +181,6 @@ function RegisterForm() {
             />
           </div>
           {Object.keys(emailErr).map((key) => {
-            console.log("EMAil error in return", emailErr)
             return <div style={{ color: "red" }}>{emailErr[key]}</div>;
           })}
           <div className="input-field">

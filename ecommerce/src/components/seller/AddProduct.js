@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import SellerNavBar from "../users/NavBar";
+import SellerNavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

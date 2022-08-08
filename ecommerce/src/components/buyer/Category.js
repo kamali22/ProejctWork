@@ -3,7 +3,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { Button, Card, Container } from "react-bootstrap";
 import "/home/kamali/react/ecommerce/src/styles/Dashboard.css";
-import SellerNavBar from "../users/NavBar";
+import SellerNavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 
 function Category({ handleClick, handleClear }) {
   const [product, setProduct] = useState([]);

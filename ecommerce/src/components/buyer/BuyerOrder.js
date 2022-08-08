@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NavBar from "../users/NavBar";
+import NavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 import "/home/kamali/react/ecommerce/src/styles/BuyerOrder.css";
 
 function BuyerOrder() {
@@ -27,53 +27,37 @@ function BuyerOrder() {
       <NavBar isSeller={isSeller} isMenu={isMenu} cart={orders} />
       <div className="delivey-data">
         <h2 className="place-header">
-          Thanks for your order!!! We will reach soon with your delicious food.
+          Thanks for your order!!! We will reach soon with your product!.
         </h2> 
         <div className="table-body">
-          {Object.values(orders).map((item) => {
+          <tr>
+            <th>Image</th>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+          </tr>
+          {Object.values(orders).map((items) => {
             return (
               <div>
-                <tr>
-                  <th>Image</th>
-                  <th>Item Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Amount</th>
-                </tr>
-                {Object.values(item).map((product) => {
-                  return (
-                    <div>
-                      {Object.values(product).map((data) => {
-                        return(
-                          <div>
-                            {Object.values(data).map((final_item) => {
-                              return (
-                                  <tr>
-                                  <td className="image">
-                                    <img src={final_item.image}  style={{ height: "6rem", width: "9rem" }}/>
-                                  </td>
-                                  <td>{final_item.prname}</td>
-                                  <td>{final_item.amount}</td>
-                                  <td>{final_item.quantity}</td>
-                                  <td>{final_item.amount * final_item.quantity}</td>
-                                  <td>{dispatch ? <div>{dispatch}</div> : <div>Yet to get shipped!</div>}</td>
-                                  </tr>
-                                );
-                            })}
-                          </div>
-                        );
-                      
-                    })}
-                  </div>
-                  );
+                {Object.values(items).map((item) => {
+                return (
+                  <tr>
+                    <td className="image">
+                      <img src={item.image}  style={{ height: "6rem", width: "9rem" }}/>
+                    </td>
+                    <td>{item.prname}</td>
+                    <td>{item.amount}</td>
+                    <td>{item.quantity}</td>
+                    <td>${item.amount * item.quantity}</td>
+                    <td>{item.status}</td>
+                  </tr>
+                );
                 })}
               </div>
             );
           })}
         </div>
-        </div>
-        <div className="order-footer">
-          {/* {dispatch ? <div>{dispatch}</div> : <div>Yet to get shipped!</div>} */}
         </div>
         </div>
   );

@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
-import Dashboard from "../seller/Dashboard";
-import AddProduct from "../seller/AddProduct";
+import Dashboard from "/home/kamali/react/ecommerce/src/components/seller/Dashboard";
+import AddProduct from "/home/kamali/react/ecommerce/src/components/seller/AddProduct";
 import NavBar from "./NavBar";
-import EditProduct from "../seller/EditProduct";
-import BuyerDashboard from "../buyer/BuyerDashboard";
-import Cart from "../buyer/Cart";
-import CheckOrder from "../seller/CheckOrder";
+import EditProduct from "/home/kamali/react/ecommerce/src/components/seller/EditProduct";
+import BuyerDashboard from "/home/kamali/react/ecommerce/src/components/buyer/BuyerDashboard";
+import Cart from "/home/kamali/react/ecommerce/src/components/buyer/Cart";
+import CheckOrder from "/home/kamali/react/ecommerce/src/components/seller/CheckOrder";
 import axios from "axios";
-import BuyerOrder from "../buyer/BuyerOrder";
-import Category from "../buyer/Category";
+import BuyerOrder from "/home/kamali/react/ecommerce/src/components/buyer/BuyerOrder";
+import Category from "/home/kamali/react/ecommerce/src/components/buyer/Category";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UpdateProfile from "./UpdateProfile";
@@ -82,13 +82,10 @@ function Routing() {
   const handleClear = (item, setQuantity) => {
     toast.success("Cart cleared!", { autoClose: 500 });
     setQuantity(0);
-    const data = [];
     setIsCartChanged("cleared");
-    //axios.post("http://localhost:9000/cart/" + []);
     Object.values(item).map((items) => {
      axios.delete("http://localhost:9000/cart" + "/" +items.id);
     });
-    //return axios.delete("http://localhost:9000/cart", item);
   };
 
   const handleChange = (item, d, setQuantity, quantity) => {

@@ -3,7 +3,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { Button, Card, Container } from "react-bootstrap";
 import "/home/kamali/react/ecommerce/src/styles/Dashboard.css";
-import NavBar from "../users/NavBar";
+import NavBar from "/home/kamali/react/ecommerce/src/components/users/NavBar";
 import { toast } from "react-toastify";
 
 function BuyerDashboard({ handleClick, handleClear }) {

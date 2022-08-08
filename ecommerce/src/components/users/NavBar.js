@@ -8,17 +8,19 @@ import "/home/kamali/react/ecommerce/src/styles/NavBar.css";
 function NavBar(props) {
   const [item, setItem] = useState([]);
   const [product, setProduct] = useState([]);
+  const [quantity, setQuantity] = useState();
   const categories = ['Electronics', 'Furniture', 'Grocery', 'Cosmetics'];
-
   const handleItem = () => {
     axios.get("http://localhost:9000/products").then((res) => {
       setProduct([res.data]);
+    });
+    axios.get("http://localhost:9000/cart").then((res) => {
+      setItem([res.data]);
     });
     Object.values(props.cart).map((items) => {
       setItem([items]);
     });
   };
-
   useEffect(() => {
     if (!props.isSeller) {
       handleItem();
@@ -74,7 +76,7 @@ function NavBar(props) {
               </Navbar.Brand>
               <Navbar.Collapse>
                 <Nav className="me-auto">
-                  <Link to="/login" onClick={(e) => props.handleClear(item)}>
+                  <Link to="/login" onClick={(e) => props.handleClear(item[0], setQuantity)}>
                     <Button className="sell-navlink">Logout</Button>
                   </Link>
                   <Link activeclassname={"active"} to="/updateprofile">
