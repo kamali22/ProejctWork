@@ -1,0 +1,220 @@
+.form {
+    background-image: url("/home/kamali/react/newreactproject/src/assests/images/food.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:1px solid black;
+    height: 100vh;
+    width: 100%;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  .border{
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-left: 20px;
+    margin-top: 13%;
+    box-shadow: 2px 5px;
+    border-radius: 10px;
+  }
+   
+  .label{
+    display: block;
+    font-size: larger;
+    color: rgb(12, 11, 11);
+    padding: 5px;
+  }
+
+  .label::after {
+    content: "*";
+    color: red;
+  }
+   
+  .input{
+    font-size: large;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin: 2px;
+    width: 480px;
+    height: 2.5rem;
+  }
+
+  .address{
+    height:4rem;
+    font-size: large;
+  }
+
+  .food-category {
+    font-style: italic;
+    font-family: monospace;
+  }
+
+  /* .btn{
+    color: rgb(182, 46, 46);
+    background-color: #00BFFF;
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 5px;
+    margin-bottom: 30px;
+    width: 480px;
+  } */
+
+  .header {
+    padding-top: 5px;
+    text-align: center;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .button {
+    border: none;
+    padding: 2%;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+    width: 30rem;
+    font-size: 1.2em;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    background-color: #44a9ec;
+  }
+  
+  p{
+      margin-bottom: 20px;
+      font-size: medium;
+  }
+   
+  /* .messages{
+    display: flex;
+    justify-content: center;
+  } */
+   
+  .error{
+    display: block;
+    color: rgb(241, 50, 50);
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
+  }
+   
+  /* .success{
+    display: block;
+    color: green;
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
+  } */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(41, 40, 40);
+    color: white;
+    height: 75px;
+}
+ul.nav-link li {
+  display: inline;
+  list-style: none;
+  justify-content: space-between;
+}
+
+li {
+  padding: 2rem;
+  font-size: 20px;
+  color: white;
+}
+
+.active {
+  color:rgb(15, 14, 14);
+  background-color: rgb(248, 252, 248);
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 20px;
+}
+.popup {
+  color: black;
+}
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 10px;
+  overflow: auto;
+}
+.box {
+  text-align: left;
+  filter: blur(0px);
+  width: 25%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 100vh;
+  margin-top: calc(87vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  padding-top: 5px;
+  border: 1px solid rgb(231, 58, 58);
+}
+.popup-title {
+  text-align: left;
+  color: black;
+}
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 30px);
+  top: calc(91.5vh - 85vh - 33px);
+  width: 10px;
+  height: 50px;
+  line-height: 5px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+.about-nav {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgb(164, 231, 164);
+  border-radius: 30px;
+  color: black;
+}
+.logo {
+  width: 55px;
+  height: 55px;
+  line-height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 50%;
+}
+.logo-header {
+  padding-left: 0px;
+  text-align: left;
+}
+
+/* .logged:hover {
+  box-shadow: 2px 5px;
+  transform: scale(1.1);
+} */
+
+.bootstrap-card {
+  display: grid;
+}
+
+.food-list {
+  margin-top: 5%;
+}
+
+.bootstrap-card {
+  margin-bottom: 7%;
+}

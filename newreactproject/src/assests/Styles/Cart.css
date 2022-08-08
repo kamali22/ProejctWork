@@ -1,0 +1,106 @@
+.table {
+    font-size: 130%;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.cartbutton {
+    margin: 10px;
+    font-size: 90%;
+    background-color: #00BFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.remove {
+    color: white;
+    font-size: 100%;
+    background-color: rgb(247, 37, 37);
+}
+.place-order {
+    color: white;
+    font-size: 100%;
+    background-color: rgb(81, 185, 81);
+}
+.order {
+    margin-top: 1%;
+    margin-right: 60%;
+    margin-left: 1.5%;
+}
+.order-summary{
+    margin-top: 1%;
+    margin-right: 60%;
+    margin-left: 1.5%;
+}
+.place-header {
+    border: 1px solid rgb(64, 66, 66);
+    color: rgb(49, 172, 209);
+    padding: 10px;
+    font-size: 130%;
+    border-radius: 10px;
+    margin: 30px;
+    margin-top: 50px;
+    margin-right: 53%;
+    background-color: rgb(231, 253, 246);
+}
+.cart-header {
+    margin-left: 210px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.footer {
+    text-align: right;
+    margin-right: 15px;
+    margin-left: 15px;
+    display: inline;
+}
+.footerdiv {
+    margin-left: 25%;
+}
+td {
+    font-size: 110%;
+}
+tr:hover {
+    background-color: rgb(240, 240, 240);
+}
+.total {
+    display: inline;
+    margin-right: 43%;
+    margin-left: 4%;
+    font-size: 120%;
+}
+.delivery {
+    display: inline;
+    margin-right: 34.5%;
+    margin-left: 4%;
+    font-size: 120%;
+}
+hr {
+    width: 250%;
+}
+.order-detail-summary {
+    border: 2px solid black;
+    margin: 30px;
+    margin-right: 53%;
+    background-color: rgb(250, 249, 249);
+    max-height: 57.5vh;
+    min-height: 57.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.details, .summary {
+    font-size: 120%;
+    margin-left: 30px;
+    width: 230%;
+}
+.delivery-image {
+    background-image: url("/home/kamali/react/newreactproject/src/assests/images/delivery1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    width: 50%;
+    float: right;
+}
+.delivery-data {
+    width: 50%;
+    float: left;
+}

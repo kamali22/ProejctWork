@@ -1,0 +1,254 @@
+{
+  "posts": [
+    {
+      "email": "abc@gmail.com",
+      "password": "123",
+      "address": "anjani-baba,546,guty",
+      "loggedIn": true,
+      "id": 1
+    },
+    {
+      "email": "berli@gmail.com",
+      "password": "123",
+      "address": "york",
+      "id": 5
+    },
+    {
+      "email": "berlusconi@gmail.com",
+      "password": "123ooo007",
+      "address": "newyork",
+      "loggedIn": true,
+      "id": 6
+    },
+    {
+      "email": "bi@gmail.com",
+      "password": "123",
+      "address": "trichy",
+      "loggedIn": true,
+      "id": 7
+    },
+    {
+      "email": "kam@gmail",
+      "password": "qwd",
+      "address": "eveqvq",
+      "loggedIn": true,
+      "id": 8
+    },
+    {
+      "email": "kama@gm",
+      "password": "qewqrq",
+      "address": "thhehwr",
+      "loggedIn": true,
+      "id": 9
+    },
+    {
+      "email": "q@gma",
+      "password": "123",
+      "address": "wef",
+      "id": 10
+    },
+    {
+      "email": "k@g",
+      "password": "asdfg",
+      "address": "bhuj",
+      "loggedIn": true,
+      "id": 11
+    },
+    {
+      "email": "b@w",
+      "password": "bhu",
+      "address": "njiokml",
+      "loggedIn": true,
+      "id": 12
+    },
+    {
+      "email": "n@q",
+      "password": "vg",
+      "address": "nht",
+      "loggedIn": true,
+      "id": 13
+    },
+    {
+      "email": "abc@gmail",
+      "password": "12qwe",
+      "address": "jkloip",
+      "loggedIn": true,
+      "id": 14
+    },
+    {
+      "email": "kamali@gmail.com",
+      "password": "aspire",
+      "address": "Namakkal",
+      "loggedIn": true,
+      "id": 15
+    },
+    {
+      "email": "kamali@gmail.com",
+      "password": "asdf",
+      "address": "nkl",
+      "loggedIn": true,
+      "id": 16
+    },
+    {
+      "email": "keerthi",
+      "password": "qwerty",
+      "address": "nkl",
+      "loggedIn": true,
+      "id": 17
+    },
+    {
+      "email": "Shwetha",
+      "password": "qwerty",
+      "address": "Chennai",
+      "loggedIn": true,
+      "id": 18
+    },
+    {
+      "email": "shwetha@gmail.com",
+      "password": "qwerty",
+      "address": "Chennai",
+      "loggedIn": true,
+      "id": 19
+    },
+    {
+      "email": "Aruna",
+      "password": "aspire",
+      "address": "Namakkal",
+      "loggedIn": true,
+      "id": 20
+    },
+    {
+      "email": "ARuna@gmail.com",
+      "password": "aspire@123",
+      "address": "Namakkal",
+      "loggedIn": true,
+      "id": 21
+    },
+    {
+      "email": "demo@gmail.com",
+      "password": "123",
+      "address": "qwe",
+      "loggedIn": true,
+      "id": 22
+    },
+    {
+      "email": "test",
+      "password": "test",
+      "address": "test",
+      "loggedIn": true,
+      "id": 23
+    },
+    {
+      "email": "",
+      "password": "",
+      "address": "",
+      "loggedIn": true,
+      "id": 24
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "test",
+      "address": "test",
+      "loggedIn": true,
+      "id": 25
+    },
+    {
+      "email": "12",
+      "password": "12",
+      "address": "12",
+      "loggedIn": true,
+      "id": 26
+    },
+    {
+      "email": "123",
+      "password": "123456",
+      "address": "fg",
+      "loggedIn": true,
+      "id": 27
+    },
+    {
+      "email": "123",
+      "password": "123456",
+      "address": "asdf",
+      "loggedIn": true,
+      "id": 28
+    },
+    {
+      "email": "12345",
+      "password": "123",
+      "address": "1234",
+      "loggedIn": true,
+      "id": 29
+    },
+    {
+      "email": "123",
+      "password": "123456",
+      "address": "fd",
+      "loggedIn": true,
+      "id": 30
+    },
+    {
+      "email": "123",
+      "password": "asdfghjk",
+      "address": "qw",
+      "loggedIn": true,
+      "id": 31
+    },
+    {
+      "email": "12",
+      "password": "12345",
+      "address": "fg",
+      "loggedIn": true,
+      "id": 32
+    },
+    {
+      "email": "12",
+      "password": "123457686",
+      "address": "sdgetbev",
+      "loggedIn": true,
+      "id": 33
+    },
+    {
+      "email": "123",
+      "password": "asd",
+      "address": "wqwe",
+      "loggedIn": true,
+      "id": 34
+    },
+    {
+      "email": "kamali@gmail.com",
+      "password": "123",
+      "address": "",
+      "loggedIn": true,
+      "id": 35
+    },
+    {
+      "email": "kamali@gmail.com",
+      "password": "1212122",
+      "address": "e",
+      "loggedIn": true,
+      "id": 36
+    },
+    {
+      "email": "kamali@gmail.com",
+      "password": "As1212",
+      "address": "b",
+      "loggedIn": true,
+      "id": 37
+    },
+    {
+      "email": "kam@gmail",
+      "password": "1231212",
+      "address": "nkl",
+      "loggedIn": true,
+      "id": 38
+    },
+    {
+      "email": "d@gmail",
+      "password": "qwerty",
+      "address": "asdf",
+      "loggedIn": true,
+      "id": 39
+    }
+  ]
+}
